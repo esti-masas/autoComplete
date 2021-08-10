@@ -23,7 +23,7 @@ def get_best_k_completions(prefix: str):
     delete_costs = np.ones(128, dtype=np.float64)
     substitute_costs = np.ones((128,128), dtype=np.float64)
     alphabet = string.ascii_letters+"0123456789 "
-    prefix = ''.join(filter(lambda i: i in alphabet, prefix))
+    prefix =''.join(filter(lambda i: i in alphabet, prefix))
 
     prefixsize=len(prefix.split())
     if prefixsize<=6:
